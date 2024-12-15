@@ -354,18 +354,24 @@ namespace ConsoleApp2
         }
         static void Polimorfismo()
         {
+
             Perro perro = new Perro("Robby", "Pastor alemán");
-            Console.WriteLine($"Tu nuevo perro {perro.Nombre} te dice '{perro.SonidoAnimal()}'");
+            //Console.WriteLine($"Tu nuevo perro {perro.Nombre} te dice '{perro.SonidoAnimal()}'");
 
             Gato gato = new Gato("Angel", true);
-            if (gato.EsArisco)
-            {
-                Console.WriteLine($"Que mal. tu gato {gato.Nombre} ha resultado muy arisco :(");
-            }
-            else
-            {
-                Console.WriteLine($"¡Felicidades, Tu nuevo gato ha resultado ser muy bueno!");
-            }
+            //if (gato.EsArisco)
+            //{
+            //    Console.WriteLine($"Que mal. tu gato {gato.Nombre} ha resultado muy arisco :(");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"¡Felicidades, Tu nuevo gato ha resultado ser muy bueno!");
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine(gato.SonidoAnimal());
+            Periquito per = new Periquito("Bobby");
+
+            Console.WriteLine($"Los perros tienen {perro.NumeroPatas()} patas y los periquitos {per.NumeroPatas()}");
         }
         static void Main(string[] args)
         {

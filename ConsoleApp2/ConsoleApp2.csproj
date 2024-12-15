@@ -46,6 +46,7 @@
     <Compile Include="Animal.cs" />
     <Compile Include="Español.cs" />
     <Compile Include="Gato.cs" />
+    <Compile Include="Periquito.cs" />
     <Compile Include="Perro.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />

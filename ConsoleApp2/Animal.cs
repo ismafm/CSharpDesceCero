@@ -10,5 +10,11 @@ namespace ConsoleApp2
     {
         public string Nombre { get; set; }
         public abstract string SonidoAnimal();
+
+        public virtual int NumeroPatas()
+        {
+            return 4;
+        }
+
     }
 }
