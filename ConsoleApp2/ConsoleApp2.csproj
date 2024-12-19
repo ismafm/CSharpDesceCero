@@ -46,11 +46,13 @@
     <Compile Include="Animal.cs" />
     <Compile Include="Español.cs" />
     <Compile Include="Gato.cs" />
+    <Compile Include="IMamifero.cs" />
     <Compile Include="Periquito.cs" />
     <Compile Include="Perro.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticCalculadora.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

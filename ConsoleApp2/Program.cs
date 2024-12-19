@@ -373,6 +373,64 @@ namespace ConsoleApp2
 
             Console.WriteLine($"Los perros tienen {perro.NumeroPatas()} patas y los periquitos {per.NumeroPatas()}");
         }
+        public static void CalculadoraEstatica()
+        {
+            double num1 = 5.5;
+            double num2 = 2;
+
+            var suma = StaticCalculadora.Sumar(num1, num2);
+            var resta = StaticCalculadora.Restar(num1, num2);
+            var multiplicacion = StaticCalculadora.Multiplicar(num1, num2);
+            var division = StaticCalculadora.Dividir(num1,num2);
+
+            Console.WriteLine("El resultado de las operaciones con el num1: " + num1 + " y " +
+                "el num2: " + num2 + " es el siguiente:\n sumar: " + suma + "\nRestar: " + resta + "\n" +
+                "Multiplicar: " + multiplicacion + "\nDividir: " + division + "");
+
+        }
+        public static void ControlErrores()
+        {
+            Console.WriteLine("Introduce el primer número:");
+            string input1 = Console.ReadLine();
+            Console.WriteLine("Introduce el segundo número:");
+            string input2 = Console.ReadLine();
+
+            try
+            {
+                // Intentar convertir las entradas a números enteros
+                int numero1 = Convert.ToInt32(input1);
+                int numero2 = Convert.ToInt32(input2);
+
+                // Intentar realizar la división
+                int resultado = numero1 / numero2;
+
+                // Si todo va bien, mostrar el resultado
+                Console.WriteLine($"El resultado de la división es: {resultado}");
+            }
+            catch (FormatException)
+            {
+                // Si ocurre un error de formato (por ejemplo, si el usuario no ingresa un número)
+                Console.WriteLine("Error: Uno o ambos valores introducidos no son números válidos.");
+            }
+            catch (DivideByZeroException)
+            {
+                // Si ocurre un error de división por cero
+                Console.WriteLine("Error: No se puede dividir por cero.");
+                //return;
+            }
+            catch (Exception ex)
+            {
+                // Captura cualquier otro error no esperado
+                Console.WriteLine($"Ha ocurrido un error inesperado: {ex.Message}");
+            }
+            finally
+            {
+                // Este bloque se ejecuta siempre, ocurra o no un error
+                Console.WriteLine("Fin del proceso de división.");
+            }
+            Console.WriteLine("Todo correcto");
+
+        }
         static void Main(string[] args)
         {
 
@@ -383,9 +441,9 @@ namespace ConsoleApp2
             //Operadores();
             //Bucles();
             //NumerosAleatorios();
-            Polimorfismo();
-
-
+            //Polimorfismo();
+            //CalculadoraEstatica();
+            ControlErrores();
 
 
 

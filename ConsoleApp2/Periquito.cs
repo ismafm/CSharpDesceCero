@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
-    internal class Periquito : Animal
+    internal class Periquito : Animal, IMamifero
     {
         public override string SonidoAnimal()
         {
             return "Pio";
+        }
+
+        public void TipoMamifero()
+        {
+            Console.WriteLine("El animal es un periquito");
         }
 
         public override int NumeroPatas()

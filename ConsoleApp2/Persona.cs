@@ -11,7 +11,7 @@ namespace ConsoleApp2
      Public: accesible desde otros proyectos
      Internal: accesible desde un mismo proyecto
      */
-    public class Persona
+    public class Persona : IMamifero
     {
         /*
         Tipos de accesibilidad en los parametros:
@@ -23,6 +23,11 @@ namespace ConsoleApp2
         public int Edad {  get; set; }
         public string PrimerApellido { get; set; }
         public string SegundoApellido { get; set; }
+
+        public void TipoMamifero()
+        {
+            Console.WriteLine("Es un humano");
+        }
         
     }
 }
